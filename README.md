@@ -1,48 +1,88 @@
-﻿## 概述
+<p align="center">
+  <img src="https://download.alianblank.com/gameframex/gameframex_logo_320.png" alt="GameFrameX Logo" width="160" />
+</p>
 
-GameFrameX 的 YooAsset Google Play 小游戏运行时组件，面向 Unity WebGL 平台，提供与 Google Play 小游戏文件系统、资源包加载流程的适配实现。
+<h1 align="center">GameFrameX YooAsset MiniGame GooglePlay</h1>
 
-## 功能特性
+<p align="center">
+  <a href="https://github.com/GameFrameX/com.gameframex.unity.tuyoogame.yooasset.minigame.googleplay/releases">
+    <img src="https://img.shields.io/github/v/release/GameFrameX/com.gameframex.unity.tuyoogame.yooasset.minigame.googleplay?style=flat-square" alt="Version" />
+  </a>
+  <a href="https://github.com/GameFrameX/com.gameframex.unity.tuyoogame.yooasset.minigame.googleplay/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/GameFrameX/com.gameframex.unity.tuyoogame.yooasset.minigame.googleplay?style=flat-square" alt="License" />
+  </a>
+  <a href="https://gameframex.doc.alianblank.com">
+    <img src="https://img.shields.io/badge/Documentation-online-blue?style=flat-square" alt="Documentation" />
+  </a>
+</p>
 
-- 提供 Google Play 小游戏专用的 IFileSystem 实现
-- 适配 Google Play 小游戏 SDK 的 AssetBundle 下载与缓存流程
-- 支持包版本请求、清单加载、资源包下载与加载
-- 可对接远程服务与解密服务
+<p align="center">
+  All-in-One Solution for Indie Game Development · Empowering Indie Developers' Dreams
+</p>
 
-## 运行环境
+<p align="center">
+  <a href="https://gameframex.doc.alianblank.com">Documentation</a> ·
+  <a href="#quick-start">Quick Start</a> ·
+  <a href="https://qm.qq.com/q/3dIpogITg">QQ Group</a> ·
+  Language: **English** ·
+  <a href="README.zh-CN.md">简体中文</a> ·
+  <a href="README.zh-TW.md">繁體中文</a> ·
+  <a href="README.ja.md">日本語</a> ·
+  <a href="README.ko.md">한국어</a>
+</p>
+
+---
+
+## Project Overview
+
+GameFrameX YooAsset MiniGame GooglePlay runtime component for Unity WebGL platform. Provides adapter implementation for Google Play Mini Game file system and asset bundle loading.
+
+## Features
+
+- Provides Google Play Mini Game specific IFileSystem implementation
+- Adapts Google Play Mini Game SDK's AssetBundle download and caching workflow
+- Supports package version requests, manifest loading, asset bundle download and loading
+- Compatible with remote services and decryption services
+
+## Requirements
 
 - Unity 2019.4
-- 平台：UNITY_WEBGL
-- 条件编译：GOOGLEPLAYMINIGAME
-- 依赖：YooAsset、StarkWebGL、GooglePlayWebGL
+- Platform: UNITY_WEBGL
+- Conditional compilation: GOOGLEPLAYMINIGAME
+- Dependencies: YooAsset, StarkWebGL, GooglePlayWebGL
 
-## 安装方式（任选其一）
+## Quick Start
 
-1. 在 `manifest.json` 的 `dependencies` 中添加
+### Installation (choose one)
+
+1. Add the following to the `dependencies` section of your `manifest.json`:
    ```json
-   {
-     "com.gameframex.unity.tuyoogame.yooasset.minigame.googleplay": "https://github.com/gameframex/com.gameframex.unity.tuyoogame.yooasset.minigame.googleplay.git"
-   }
+   {"com.gameframex.unity.tuyoogame.yooasset.minigame.googleplay": "https://github.com/GameFrameX/com.gameframex.unity.tuyoogame.yooasset.minigame.googleplay.git"}
    ```
-2. 在 Unity 的 Package Manager 使用 Git URL 添加  
-   https://github.com/gameframex/com.gameframex.unity.tuyoogame.yooasset.minigame.googleplay.git
-3. 直接下载仓库放到 Unity 项目的 `Packages` 目录
 
-## 使用说明
+2. In Unity's Package Manager, use `Git URL` to add the package: https://github.com/GameFrameX/com.gameframex.unity.tuyoogame.yooasset.minigame.googleplay.git
 
-1. 确保已接入 Google Play 小游戏 SDK，并启用 `GOOGLEPLAYMINIGAME` 宏
-2. 通过 `GooglePlayFileSystemCreater.CreateFileSystemParameters(...)` 生成文件系统参数
-3. 将参数传入 YooAsset 的文件系统创建流程
-4. 按照 YooAsset 的常规流程进行初始化、版本请求、清单加载与资源加载
+3. Download the repository and place it in your Unity project's `Packages` directory. It will be loaded automatically.
 
-## 主要类型
+### Usage
 
-- `GooglePlayFileSystem`：Google Play 小游戏文件系统实现
-- `GooglePlayFileSystemCreater`：文件系统参数构建入口
-- `LoadGooglePlayAssetBundleOperation`：资源包下载与加载操作
-- `UnityGooglePlayAssetBundleRequestOperation`：基于 Google Play 小游戏 SDK 的下载请求封装
+1. Ensure Google Play Mini Game SDK is integrated and `GOOGLEPLAYMINIGAME` macro is enabled
+2. Use `GooglePlayFileSystemCreater.CreateFileSystemParameters(...)` to generate file system parameters
+3. Pass the parameters to YooAsset's file system creation workflow
+4. Follow YooAsset's standard workflow for initialization, version requests, manifest loading, and asset loading
 
-## 注意事项
+## Documentation & Resources
 
-- 需要设置 Google Play 小游戏的缓存根目录，否则会抛出异常
-- 未配置远程服务时会回退到 Web 服务器路径
+- [Official Documentation](https://gameframex.doc.alianblank.com)
+
+## Community & Support
+
+- QQ Group: [Join](https://qm.qq.com/q/3dIpogITg)
+
+## Changelog
+
+See [Releases](https://github.com/GameFrameX/com.gameframex.unity.tuyoogame.yooasset.minigame.googleplay/releases) for changelog.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/GameFrameX/com.gameframex.unity.tuyoogame.yooasset.minigame.googleplay/blob/main/LICENSE) file for details.
