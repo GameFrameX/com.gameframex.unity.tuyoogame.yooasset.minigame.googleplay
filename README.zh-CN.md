@@ -41,23 +41,36 @@ GameFrameX 的 YooAsset Google Play 小游戏运行时组件，面向 Unity WebG
 
 ## 快速开始
 
-### 安装方式（任选其一）
+### 安装
 
-1. 在 `manifest.json` 的 `dependencies` 中添加：
-   ```json
-   {"com.gameframex.unity.tuyoogame.yooasset.minigame.googleplay": "https://github.com/GameFrameX/com.gameframex.unity.tuyoogame.yooasset.minigame.googleplay.git"}
-   ```
+编辑 Unity 项目的 `Packages/manifest.json`，添加 `scopedRegistries` 部分：
 
-2. 在 Unity 的 Package Manager 使用 Git URL 添加：https://github.com/GameFrameX/com.gameframex.unity.tuyoogame.yooasset.minigame.googleplay.git
+```json
+{
+  "scopedRegistries": [
+    {
+      "name": "GameFrameX",
+      "url": "https://gameframex.upm.alianblank.uk",
+      "scopes": [
+        "com.gameframex"
+      ]
+    }
+  ]
+}
+```
 
-3. 直接下载仓库放到 Unity 项目的 `Packages` 目录。
+`scopes` 控制哪些包通过此注册表解析。只有以 `com.gameframex` 开头的包才会从这个注册表获取。
 
-### 使用说明
+Then add the package to `dependencies`:
 
-1. 确保已接入 Google Play 小游戏 SDK，并启用 `GOOGLEPLAYMINIGAME` 宏
-2. 通过 `GooglePlayFileSystemCreater.CreateFileSystemParameters(...)` 生成文件系统参数
-3. 将参数传入 YooAsset 的文件系统创建流程
-4. 按照 YooAsset 的常规流程进行初始化、版本请求、清单加载与资源加载
+```json
+{
+  "dependencies": {
+    "com.gameframex.unity.tuyoogame.yooasset.minigame.googleplay": "1.0.0"
+  }
+}
+```
+
 
 ## 文档与资源
 
