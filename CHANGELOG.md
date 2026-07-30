@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/gameframex/com.gameframex.unity.tuyoogame.yooasset.minigame.googleplay/compare/1.0.1...1.0.2) (2026-07-30)
+
+
+### Bug Fixes
+
+* 更新依赖项 com.gameframex.unity.tuyoogame.yooasset 至 2.9.4 ([f42ddcf](https://github.com/gameframex/com.gameframex.unity.tuyoogame.yooasset.minigame.googleplay/commit/f42ddcf94785e5e9395783ea0048316c940dd8bc))
+
 ## [1.0.1](https://github.com/gameframex/com.gameframex.unity.tuyoogame.yooasset.minigame.googleplay/compare/1.0.0...1.0.1) (2026-06-07)
 
 
